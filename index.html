@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Generate a polished Guttersville Records press kit with live preview, PDF export, and share tools."
+  />
+  <meta property="og:title" content="Guttersville Records Press Kit" />
+  <meta
+    property="og:description"
+    content="Build a press kit with responsive preview, downloadable PDF, and share-ready assets in minutes."
+  />
+  <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABGUlEQVR42u3bwRGAIAxFQVqw/2K1CUg+Zl8BjriXDBnXo9aWTwAAgEIAXpUEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAAFAOwK7f1U4c73QAAAAAAAAAgDkAu16r5niZTwYAAAAAAAAA5ANUjo+VYygAAAAAAAAAAMAJgJyrrusv4wAAAAAAAAAAVwHcOCx2LU0BAAAAAAAAAJkAk1eSEWMoAAAAAAAAACAGIO3q7ecrSQAAAAAAAABAMICax1ABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIDBAKoPAAAAauwD9FAirzFaLPUAAAAASUVORK5CYII=" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guttersville Records Press Kit" />
+  <meta
+    name="twitter:description"
+    content="Create a Guttersville Records press kit with live preview, PDF export, and easy sharing."
+  />
+  <meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABGUlEQVR42u3bwRGAIAxFQVqw/2K1CUg+Zl8BjriXDBnXo9aWTwAAgEIAXpUEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAAFAOwK7f1U4c73QAAAAAAAAAgDkAu16r5niZTwYAAAAAAAAA5ANUjo+VYygAAAAAAAAAAMAJgJyrrusv4wAAAAAAAAAAVwHcOCx2LU0BAAAAAAAAAJkAk1eSEWMoAAAAAAAAACAGIO3q7ecrSQAAAAAAAABAMICax1ABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIDBAKoPAAAAauwD9FAirzFaLPUAAAAASUVORK5CYII=" />
+  <title>Guttersville Records Press Kit</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABGUlEQVR42u3bwRGAIAxFQVqw/2K1CUg+Zl8BjriXDBnXo9aWTwAAgEIAXpUEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAAFAOwK7f1U4c73QAAAAAAAAAgDkAu16r5niZTwYAAAAAAAAA5ANUjo+VYygAAAAAAAAAAMAJgJyrrusv4wAAAAAAAAAAVwHcOCx2LU0BAAAAAAAAAJkAk1eSEWMoAAAAAAAAACAGIO3q7ecrSQAAAAAAAABAMICax1ABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIDBAKoPAAAAauwD9FAirzFaLPUAAAAASUVORK5CYII=" alt="Guttersville Records" class="brand-logo" />
+      <span class="brand-name">Guttersville Records Press Kit</span>
+    </div>
+    <button id="previewButton" class="secondary-button" type="button">Preview</button>
+  </header>
+  <main class="layout">
+    <section class="form-panel" aria-label="Press kit form">
+      <form id="pressKitForm" novalidate>
+        <div class="form-grid">
+          <label>Artist name*
+            <input type="text" name="artistName" autocomplete="off" required />
+            <span class="error" data-error-for="artistName"></span>
+          </label>
+          <label>Tagline*
+            <input type="text" name="tagline" autocomplete="off" required />
+            <span class="error" data-error-for="tagline"></span>
+          </label>
+          <label>Bio*
+            <textarea name="bio" rows="4" required></textarea>
+            <span class="error" data-error-for="bio"></span>
+          </label>
+          <label>Genre*
+            <input type="text" name="genre" autocomplete="off" required />
+            <span class="error" data-error-for="genre"></span>
+          </label>
+          <label>Location*
+            <input type="text" name="location" autocomplete="off" required />
+            <span class="error" data-error-for="location"></span>
+          </label>
+          <label>For fans of
+            <input type="text" name="forFansOf" autocomplete="off" />
+            <span class="error" data-error-for="forFansOf"></span>
+          </label>
+          <label>Streaming URL*
+            <input type="url" name="streamingUrl" autocomplete="off" required placeholder="https://" />
+            <span class="error" data-error-for="streamingUrl"></span>
+          </label>
+          <label>Website*
+            <input type="url" name="website" autocomplete="off" required placeholder="https://" />
+            <span class="error" data-error-for="website"></span>
+          </label>
+          <label>Social links (one per line)
+            <textarea name="socialLinks" rows="3" placeholder="https://instagram.com/artist"></textarea>
+            <span class="error" data-error-for="socialLinks"></span>
+          </label>
+          <label>Contact name*
+            <input type="text" name="contactName" autocomplete="off" required />
+            <span class="error" data-error-for="contactName"></span>
+          </label>
+          <label>Contact email*
+            <input type="email" name="contactEmail" autocomplete="off" required />
+            <span class="error" data-error-for="contactEmail"></span>
+          </label>
+          <label>Contact phone
+            <input type="tel" name="contactPhone" autocomplete="off" />
+            <span class="error" data-error-for="contactPhone"></span>
+          </label>
+          <fieldset class="image-fieldset">
+            <legend>Press photo*</legend>
+            <div class="image-inputs">
+              <label>From URL
+                <input type="url" name="pressPhotoUrl" placeholder="https://" />
+              </label>
+              <label>Upload
+                <input type="file" name="pressPhotoFile" accept="image/*" />
+              </label>
+            </div>
+            <span class="error" data-error-for="pressPhoto"></span>
+          </fieldset>
+          <fieldset class="image-fieldset">
+            <legend>Secondary image</legend>
+            <div class="image-inputs">
+              <label>From URL
+                <input type="url" name="secondaryImageUrl" placeholder="https://" />
+              </label>
+              <label>Upload
+                <input type="file" name="secondaryImageFile" accept="image/*" />
+              </label>
+            </div>
+            <span class="error" data-error-for="secondaryImage"></span>
+          </fieldset>
+          <label>EPK notes
+            <textarea name="epkNotes" rows="3"></textarea>
+            <span class="error" data-error-for="epkNotes"></span>
+          </label>
+          <label>Logo override (optional URL)
+            <input type="url" name="logoUrl" placeholder="https://" />
+          </label>
+          <label class="size-select">PDF size
+            <select name="pageSize">
+              <option value="letter">US Letter</option>
+              <option value="a4">A4</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="downloadPdfButton" class="primary-button">Download PDF</button>
+          <button type="button" id="sendEmailButton" class="primary-button coming-soon-button" title="Email delivery is coming soon." aria-describedby="emailComingSoonNote">Email coming soon</button>
+          <button type="button" id="copyShareButton" class="secondary-button">Copy share blurb</button>
+          <button type="reset" id="resetButton" class="secondary-button">Reset</button>
+        </div>
+        <p class="coming-soon-note" id="emailComingSoonNote">Email delivery is coming soon. Download the PDF or copy the share blurb to share updates for now.</p>
+      </form>
+    </section>
+    <section class="preview-panel" aria-live="polite">
+      <div class="preview-header">
+        <h2>Live preview</h2>
+        <p class="preview-subtext">Updates as you type. PDF export matches this layout.</p>
+      </div>
+      <div id="previewPages" class="preview-pages" role="region" aria-label="Press kit preview"></div>
+    </section>
+  </main>
+  <div class="toast-container" role="status" aria-live="assertive"></div>
+  <div class="loading-overlay" id="loadingOverlay" aria-live="assertive" hidden>
+    <div class="loading-card">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Building your press kit...</p>
+    </div>
+  </div>
+  <div class="modal" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle" hidden>
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2 id="emailModalTitle">Send PDF via email</h2>
+        <button type="button" class="modal-close" id="closeEmailModal" aria-label="Close">
+          ×
+        </button>
+      </header>
+      <form id="emailForm">
+        <label>To*
+          <input type="email" name="to" required placeholder="press@outlet.com" />
+          <span class="error" data-error-for="email-to"></span>
+        </label>
+        <label>CC
+          <input type="email" name="cc" placeholder="team@guttersville.com" />
+          <span class="error" data-error-for="email-cc"></span>
+        </label>
+        <label>Subject*
+          <input type="text" name="subject" required />
+          <span class="error" data-error-for="email-subject"></span>
+        </label>
+        <label>Message
+          <textarea name="message" rows="4" placeholder="Hi there — sharing our latest press kit!"></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="primary-button">Send PDF via email</button>
+          <button type="button" class="secondary-button" id="emailCancelButton">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="site-footer">© Guttersville Records 2025</footer>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
