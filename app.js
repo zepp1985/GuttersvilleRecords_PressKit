@@ -132,7 +132,10 @@ function wireForm() {
   });
 
   downloadPdfButton.addEventListener('click', async () => {
-    if (!validateForm()) return;
+    if (!validateForm()) {
+      showToast('Complete required fields and add a press photo before downloading.', 'error');
+      return;
+    }
     await triggerPdfDownload();
   });
 
@@ -971,7 +974,10 @@ async function triggerPdfDownload() {
     const anchor = document.createElement('a');
     anchor.href = url;
     anchor.download = filename;
+    anchor.rel = 'noopener';
+    document.body.appendChild(anchor);
     anchor.click();
+    anchor.remove();
     URL.revokeObjectURL(url);
     showToast('PDF downloaded');
   } catch (error) {
